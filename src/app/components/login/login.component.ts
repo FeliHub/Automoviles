@@ -23,16 +23,17 @@ export class LoginComponent  implements OnInit {
       this.router.navigate(['/index']);
 
     }catch(error){
-      console.error("Ha ocurrido un error con el login: ", error);
+      console.error("Ha ocurrido un error con el login:  " +error);
     }
   }//fin de Login
 
   async register(){
     try{
       await this.authService.register(this.email, this.password);
+      alert("Usuario registrado exitosamente");
 
     }catch(error){
-      console.error("Ha ocurrido un problema con el registro: ", error);
+      console.error("Ha ocurrido un problema con el registro:  " +error);
     }
   }//fin de Register
 }
