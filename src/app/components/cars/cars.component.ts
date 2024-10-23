@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CarsService, Car } from 'src/app/services/cars.service';
+import { AuthService } from 'src/app/services/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cars',
@@ -9,7 +11,11 @@ import { CarsService, Car } from 'src/app/services/cars.service';
 export class CarsComponent  implements OnInit {
   car:Car ={patente:"", year:0, imageUrl:"", nombre:""}
 
-  constructor(private carService:CarsService) { }
+  constructor(
+    private carService:CarsService,
+    private aService:AuthService,
+    private router:Router
+  ) {}
 
   ngOnInit() {}
 
@@ -19,4 +25,9 @@ export class CarsComponent  implements OnInit {
     }).catch(error=>{alert("Error al agregar "+error)})
   }
 
+  logout(){
+    this.aService.logout();
+    alert("Sesión ha sido cerrada")
+    this.router.navigate(['/home']);
+  }
 }
