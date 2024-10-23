@@ -18,5 +18,12 @@ export class CarsService {
 
   constructor(private firestore: AngularFirestore) { }
 
-  
+  addCar(car:Car): Promise<void>{
+    const id = this.firestore.createId(); //Va a generar la ID automaticamente
+    return this.firestore.collection<Car>(this.collectionName).doc(id).set({...car, id})
+  }
+
+  getCar():Observable<Car[]>{
+    return this.firestore.collection<Car>(this.collectionName).valueChanges();
+  }
 }

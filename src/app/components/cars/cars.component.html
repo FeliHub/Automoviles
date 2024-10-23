@@ -1,3 +1,27 @@
-<p>
-  cars works!
-</p>
+<form (ngSubmit)="addCar()">
+  <ion-item>
+    <ion-label position="floating">Patente</ion-label>
+    <ion-input [(ngModel)]="car.patente" required name="patente" placeholder="Ingrese patente"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Año</ion-label>
+    <ion-input [(ngModel)]="car.year" type="number" name="year" placeholder="Ingrese año"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Nombre</ion-label>
+    <ion-input [(ngModel)]="car.nombre" name="nombre" placeholder="Ingrese nombre"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Ruta Imagen</ion-label>
+    <ion-input [(ngModel)]="car.imageUrl" type="number" name="imageUrl" placeholder="img"></ion-input>
+  </ion-item>
+
+  <br>
+
+  <ion-button type="submit" expand="full" color="success">Guardar</ion-button>
+</form>
+
+<br><br>
