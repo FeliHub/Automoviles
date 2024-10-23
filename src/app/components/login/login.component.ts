@@ -20,10 +20,10 @@ export class LoginComponent  implements OnInit {
     try{
       await this.authService.login(this.email, this.password);
       alert("Ha entrado a su cuenta");
-      this.router.navigate(['/index']);
+      this.router.navigate(['/inicio']);
 
     }catch(error){
-      console.error("Ha ocurrido un error con el login:  " +error);
+      alert("Ha ocurrido un error con el login:  " +error);
     }
   }//fin de Login
 
@@ -33,7 +33,7 @@ export class LoginComponent  implements OnInit {
       alert("Usuario registrado exitosamente");
 
     }catch(error){
-      console.error("Ha ocurrido un problema con el registro:  " +error);
+      alert("Ha ocurrido un problema con el registro:  " +error);
     }
   }//fin de Register
 }
