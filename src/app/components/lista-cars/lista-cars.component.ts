@@ -17,3 +17,14 @@ export class ListaCarsComponent  implements OnInit {
     })
   }
 }
+
+
+/*
+export interface Car{
+  id?: string;
+  nombre?: string;
+  patente?: string;
+  year?: number;
+  imageUrl?: string;
+}
+*/
