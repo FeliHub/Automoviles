@@ -12,7 +12,9 @@ export class LoginComponent  implements OnInit {
   email:string = "";
   password:string = "";
 
-  constructor(private authService:AuthService, private router:Router) {}
+  constructor(private authService:AuthService,
+              private router:Router,
+              private aService:AuthService,) {}
 
   ngOnInit() {}
 
@@ -36,4 +38,10 @@ export class LoginComponent  implements OnInit {
       alert("Ha ocurrido un problema con el registro:  " +error);
     }
   }//fin de Register
+
+  logout(){
+    this.aService.logout();
+    alert("Sesión ha sido cerrada")
+    this.router.navigate(['/home']);
+  }
 }

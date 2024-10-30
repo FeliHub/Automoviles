@@ -24,10 +24,4 @@ export class CarsComponent  implements OnInit {
       alert("Se agregó correctamente")
     }).catch(error=>{alert("Error al agregar "+error)})
   }
-
-  logout(){
-    this.aService.logout();
-    alert("Sesión ha sido cerrada")
-    this.router.navigate(['/home']);
-  }
 }
