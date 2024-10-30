@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
 import { FormsModule } from '@angular/forms';
-import { CarsComponent } from '../components/cars/cars.component';
 
 import { InicioPage } from './inicio.page';
 import { InicioPageRoutingModule } from './inicio-routing.module';
@@ -15,6 +14,6 @@ import { InicioPageRoutingModule } from './inicio-routing.module';
     IonicModule,
     InicioPageRoutingModule
   ],
-  declarations: [InicioPage, CarsComponent]
+  declarations: [InicioPage]
 })
 export class InicioPageModule {}

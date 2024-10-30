@@ -16,9 +16,14 @@ const routes: Routes = [
     path: 'inicio',
     loadChildren: () => import('./inicio/inicio.module').then( m => m.InicioPageModule),
     canActivate: [authGuard]
-  },  {
+  },
+  {
     path: 'listar-cars',
     loadChildren: () => import('./listar-cars/listar-cars.module').then( m => m.ListarCarsPageModule)
+  },
+  {
+    path: 'registrar',
+    loadChildren: () => import('./registrar/registrar.module').then( m => m.RegistrarPageModule)
   },
 
 ];

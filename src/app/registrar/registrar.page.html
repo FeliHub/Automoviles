@@ -1,0 +1,14 @@
+<ion-header [translucent]="true">
+  <ion-toolbar class="new-background-color">
+    <ion-buttons slot="start">
+      <ion-back-button default-href="inicio">Atras</ion-back-button>
+    </ion-buttons>
+    <ion-title><h3><b>Automoviles Inc.</b></h3></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <app-cars></app-cars>
+  <br><br>
+  <ion-button expand="full" color="primary" routerLink="/listar-cars">Ver Autos</ion-button>
+</ion-content>
