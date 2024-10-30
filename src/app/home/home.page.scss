@@ -16,12 +16,22 @@
 #container p {
   font-size: 16px;
   line-height: 22px;
-
-  color: #8c8c8c;
-
+  color: #d6d6d6;
   margin: 0;
 }
 
 #container a {
   text-decoration: none;
+}
+
+h1 {
+  text-align: center;
+}
+
+.new-background-color{
+  --background: #4168bb;
+}
+
+.autoimg {
+  height: 85px;
 }
