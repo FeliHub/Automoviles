@@ -7,6 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InicioPage implements OnInit {
 
+  slides = [
+    {
+      img: 'assets/img/auto1.png',
+      titulo: 'visible changes today'
+    }
+  ];
+
   constructor() { }
 
   ngOnInit() {
