@@ -11,8 +11,9 @@ import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { FormsModule } from '@angular/forms';
 
-import { HttpClient } from '@angular/common/http';
-import { HttpClientModule } from '@angular/common/http';
+//import { HttpClient } from '@angular/common/http';
+//import { HttpClientModule } from '@angular/common/http';
+//import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 
 @NgModule({
@@ -24,11 +25,12 @@ import { HttpClientModule } from '@angular/common/http';
             AngularFireAuthModule,
             AngularFirestoreModule,
             FormsModule,
-            HttpClient,
-            HttpClientModule
+            //HttpClient,
+            //HttpClientModule
            ],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
+  //schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 
 export class AppModule {}
