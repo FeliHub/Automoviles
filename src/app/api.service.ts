@@ -8,14 +8,11 @@ import { Observable } from 'rxjs';
 })
 
 export class ApiService {
-  httpOptions = {
-    headers: new HttpHeaders({
-      'Content-Type': 'application/json',
-      'Access-Control-Allow-Origin': '*'
-    })
+  constructor(public http:HttpClient) {}
+
+  getdata<T> (url: string){
+    url = 'http://universities.hipolabs.com/search?country=United+States'
+
+    return this.http.get<T[]>(url);
   }
-
-  apiURL = 'https://jsonplaceholder.typicode.com/';
-
-  constructor(private http:HttpClient) { }
 }

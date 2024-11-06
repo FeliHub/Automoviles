@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { ApiService } from '../api.service';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
@@ -6,19 +7,20 @@ import { HttpClient } from '@angular/common/http';
   templateUrl: './inicio.page.html',
   styleUrls: ['./inicio.page.scss'],
 })
-export class InicioPage implements OnInit {
-  constructor(private http: HttpClient) {
+
+export class InicioPage {
+
+  getdata:any[]=[];
+  constructor(public app:ApiService) {
+    
+    this.app.getdata<[]>("").subscribe(data => {
+      this.getdata = data
+      console.log(this.getdata);
+    })
+  
   }
 
   swiperSlideChanged(e: any) {
     console.log('changed: ', e)
   }
-
-  ngOnInit() {
-    this.http.get('https://car-data.p.rapidapi.com/cars')
-    .subscribe(res =>{
-      console.log('se ha cargado')
-    })
-  }
-
 }
