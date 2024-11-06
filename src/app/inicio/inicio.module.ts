@@ -5,6 +5,8 @@ import { FormsModule } from '@angular/forms';
 
 import { InicioPage } from './inicio.page';
 import { InicioPageRoutingModule } from './inicio-routing.module';
+//import { HttpClient } from '@angular/common/http';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 
 @NgModule({
@@ -12,8 +14,10 @@ import { InicioPageRoutingModule } from './inicio-routing.module';
     CommonModule,
     FormsModule,
     IonicModule,
-    InicioPageRoutingModule
+    InicioPageRoutingModule,
+    //HttpClient
   ],
-  declarations: [InicioPage]
+  declarations: [InicioPage],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class InicioPageModule {}

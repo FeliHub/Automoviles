@@ -2,23 +2,30 @@
   <ion-toolbar class="new-background-color">
     <ion-buttons slot="secondary">
       <ion-button routerLink="/home">
-        <ion-icon slot="icon-only" name="person-circle" color="light"></ion-icon>
+        <ion-icon slot="icon-only" name="person-circle"></ion-icon>
       </ion-button>
     </ion-buttons>
     <ion-title><h3><b>Automoviles Inc.</b></h3></ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true" class="root">
-  <br><br>
-  <ion-button class="regiscol2" shape="round" expand="full" routerLink="/registrar">Ver Autos</ion-button>
+<ion-content padding class="bgcol" [fullscreen]="true" class="root">
 
-  <!--<swiper-container pager="true">
-    <swiper-slide>Slide 1</swiper-slide>
+  <h2><b>✨ Autos destacados de hoy ✨</b></h2>
+  <swiper-container pager="true"
+    (slidechange)="swiperSlideChanged($event)"
+    [loop]="true"
+    [pagination]="true">
+    
+    <swiper-slide><ion-img src="assets/img/rojo.jpg"></ion-img></swiper-slide>
 
-    <swiper-slide>Slide 2</swiper-slide>
+    <swiper-slide><ion-img src="assets/img/RT_V_05a99b23df054e0eb2c93b3885eaa13e.jpg"></ion-img></swiper-slide>
 
-    <swiper-slide>Slide 3</swiper-slide>
+    <swiper-slide><ion-img class="autoimg" src="assets/img/white.jpg"></ion-img></swiper-slide>
 
-  </swiper-container>-->
+  </swiper-container>
+
+  <br>
+
+  <ion-button class="regiscol2" shape="round" expand="full" routerLink="/registrar">Registrar Autos</ion-button>
 </ion-content>

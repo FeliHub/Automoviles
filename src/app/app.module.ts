@@ -13,7 +13,7 @@ import { FormsModule } from '@angular/forms';
 
 //import { HttpClient } from '@angular/common/http';
 //import { HttpClientModule } from '@angular/common/http';
-//import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 
 @NgModule({
@@ -30,7 +30,7 @@ import { FormsModule } from '@angular/forms';
            ],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
-  //schemas: [CUSTOM_ELEMENTS_SCHEMA]
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 
 export class AppModule {}

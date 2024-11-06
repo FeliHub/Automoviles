@@ -1,9 +1,9 @@
-:root {
-	--ion-background-color: #92b4fd;
-}
-
 .new-background-color{
     --background: #4168bb;
+  }
+
+h2 {
+    text-align: center;
   }
 
 h3 {
@@ -14,3 +14,19 @@ h3 {
     --background: #295dc7;
     --color: white;
   }
+
+swiper-container {
+  width: 80%;
+  height: 70%;
+}
+
+swiper-slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.autoimg {
+  height: 500px;
+}

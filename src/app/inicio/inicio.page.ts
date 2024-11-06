@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-inicio',
@@ -6,17 +7,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./inicio.page.scss'],
 })
 export class InicioPage implements OnInit {
+  constructor(private http: HttpClient) {
+  }
 
-  slides = [
-    {
-      img: 'assets/img/auto1.png',
-      titulo: 'visible changes today'
-    }
-  ];
-
-  constructor() { }
+  swiperSlideChanged(e: any) {
+    console.log('changed: ', e)
+  }
 
   ngOnInit() {
+    this.http.get('https://car-data.p.rapidapi.com/cars')
+    .subscribe(res =>{
+      console.log('se ha cargado')
+    })
   }
 
 }
