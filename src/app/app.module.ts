@@ -12,7 +12,7 @@ import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { FormsModule } from '@angular/forms';
 
 //import { HttpClient } from '@angular/common/http';
-//import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 
@@ -26,7 +26,7 @@ import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
             AngularFirestoreModule,
             FormsModule,
             //HttpClient,
-            //HttpClientModule
+            HttpClientModule
            ],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
