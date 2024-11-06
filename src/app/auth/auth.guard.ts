@@ -20,3 +20,5 @@ export const authGuard: CanActivateFn = (route, state) => {
     })
   );
 };
+
+//Hacer login, register y logout global
