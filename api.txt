@@ -31,3 +31,11 @@ req.end();
 
 
 https://rapidapi.com/principalapis/api/car-data/playground/apiendpoint_110d9e56-8199-4939-973a-57703ebb7f28
+
+
+
+Vistas de Usuarios (hacer):
+
+- Tienda de vehiculos
+- Formulario de compra ()
+- Contacto al vendedor ()

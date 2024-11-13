@@ -2,6 +2,10 @@
     --background: #4168bb;
   }
 
+.new-background-color2{
+    --background: #1d459b;
+  }
+
 h2 {
     text-align: center;
   }
@@ -15,18 +19,26 @@ h3 {
     --color: white;
   }
 
+.autoimg {
+  height: 500px;
+  }
+
 swiper-container {
   width: 80%;
   height: 40%;
-}
+  }
 
 swiper-slide {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-}
+  }
 
-.autoimg {
-  height: 500px;
-}
+ion-icon {
+  color: white
+  }
+
+ion-buttons {
+  color: white
+  }
