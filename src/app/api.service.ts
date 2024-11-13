@@ -9,31 +9,18 @@ import { Observable } from 'rxjs';
 
 
 export class ApiService {
-  constructor(public http:HttpClient) {}
 
-  getdata<T> (url: string){
-    url = 'http://universities.hipolabs.com/search?country=United+States'
+  private apiUrl = 'https://car-data.p.rapidapi.com/cars?limit=10&page=0';
+  private headers = new HttpHeaders({
+    'x-rapidapi-key': '7088f73db2mshb6e1a58e54a2260p12c8c2jsn25dd5ce208d8',
+    'x-rapidapi-host': 'car-data.p.rapidapi.com'
+  });
 
-    return this.http.get<T[]>(url);
+  constructor(private http: HttpClient) {}
+
+  getCars(): Observable<any> {
+    return this.http.get<any>(this.apiUrl, { headers: this.headers });
   }
-
-/*
-export class ApiService {
-  httpOptions = {
-    headers: new HttpHeaders({
-      'Content-Type': 'application/json',
-      'Access-Control-Allow-Origin': '*'
-    })
-  }
-
-  apiURL = 'https://jsonplaceholder.typicode.com';
-
-  constructor(private http:HttpClient) {}
-
-  getPosts(): Observable<any> {
-    return this.http.get(this.apiURL + '/posts/').pipe(retry(3));
-  }
-*/
 }
 
 
