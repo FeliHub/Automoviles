@@ -7,6 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 
+
 export class ApiService {
   constructor(public http:HttpClient) {}
 
@@ -15,4 +16,26 @@ export class ApiService {
 
     return this.http.get<T[]>(url);
   }
+
+/*
+export class ApiService {
+  httpOptions = {
+    headers: new HttpHeaders({
+      'Content-Type': 'application/json',
+      'Access-Control-Allow-Origin': '*'
+    })
+  }
+
+  apiURL = 'https://jsonplaceholder.typicode.com';
+
+  constructor(private http:HttpClient) {}
+
+  getPosts(): Observable<any> {
+    return this.http.get(this.apiURL + '/posts/').pipe(retry(3));
+  }
+*/
 }
+
+
+
+

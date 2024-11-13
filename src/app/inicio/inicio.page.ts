@@ -17,8 +17,17 @@ export class InicioPage {
       this.getdata = data
       console.log(this.getdata);
     })
-  
   }
+  
+/*
+  constructor(private api: ApiService) {
+    this.api.getPosts().subscribe((res) => {
+      console.log(res[0]);
+    }, (error) => {
+      console.log(error);
+    });
+  }
+*/
 
   swiperSlideChanged(e: any) {
     console.log('changed: ', e)
