@@ -58,4 +58,18 @@
     <swiper-slide><ion-img class="autoimg" src="assets/img/white.jpg"></ion-img></swiper-slide>
 
   </swiper-container>
+
+  <ion-card *ngFor="let car of cars">
+    <img [src]="car.image" alt="Car image" />
+    <ion-card-header>
+      <ion-card-title>{{ car.make }} {{ car.model }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p><strong>Year:</strong> {{ car.year }}</p>
+      <p><strong>Price:</strong> ${{ car.price }}</p>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-button class="regiscol2" shape="round" routerLink="/registrar">Registrar Autos</ion-button>
+  
 </ion-content>

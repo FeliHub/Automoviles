@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../api.service';
 import { HttpClient } from '@angular/common/http';
 
@@ -8,26 +8,24 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./inicio.page.scss'],
 })
 
-export class InicioPage {
+export class InicioPage implements OnInit{
 
-  getdata:any[]=[];
-  constructor(public app:ApiService) {
-    
-    this.app.getdata<[]>("").subscribe(data => {
-      this.getdata = data
-      console.log(this.getdata);
-    })
+cars: any[] = [];
+
+  constructor(private apiService: ApiService) {}
+
+  ngOnInit() {
+    this.apiService.getCars().subscribe(
+      (response) => {
+        console.log(response);
+        this.cars = response.cars; // Suponiendo que la respuesta contiene un array 'cars'
+      },
+      (error) => {
+        console.error('Error al obtener los coches', error);
+      }
+    );
   }
-  
-/*
-  constructor(private api: ApiService) {
-    this.api.getPosts().subscribe((res) => {
-      console.log(res[0]);
-    }, (error) => {
-      console.log(error);
-    });
-  }
-*/
+
 
   swiperSlideChanged(e: any) {
     console.log('changed: ', e)
